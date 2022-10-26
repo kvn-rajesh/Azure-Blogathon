@@ -1,4 +1,7 @@
 Code Snippet
+In this notebook the following steps will be excuted:
+Build model on Flavia pictures in storage account
+Build model on dataset of Flavia pictures 
 workspace="<<your_name_of_azure_ml_service_workspace>>"
 resource_grp="<<your_resource_group_amlservice>>"
 subscription_id="<<your_subscriptionid_amlservice>>"
@@ -16,22 +19,6 @@ par_service_name = 'flavia'
 
 # MAGIC %md ##### 1a. Authenticate to Azure ML workspace (interactive, using AAD and browser)
 
-# COMMAND ----------
-
-import sys
-import requests
-import time
-import base64
-import datetime
-import azureml.core
-import shutil
-import os, json
-from azureml.core import Workspace
-from azureml.core.run import Run
-from azureml.core.experiment import Experiment
-from azureml.core.model import Model
-import azureml.core
-from azureml.core.authentication import ServicePrincipalAuthentication
 
 ws = Workspace(workspace_name = workspace,
                subscription_id = subscription_id,
@@ -41,7 +28,7 @@ ws.get_details()
 
 # COMMAND ----------
 
-# MAGIC %md ##### 1b. Retrieve best model from Azure ML Service
+# MAGIC %md #####  Retrieve best model from Azure ML Service
 
 # COMMAND ----------
 
@@ -51,7 +38,7 @@ print("Model picked: {} \nModel Description: {} \nModel Version: {}".format(mode
 
 # COMMAND ----------
 
-# MAGIC %md ##### 1c. Create score file (script that will be used in endpoint to consume png) and conda env
+# MAGIC %md #####  Create score file (script that will be used in endpoint to consume png) and conda env
 
 # COMMAND ----------
 
