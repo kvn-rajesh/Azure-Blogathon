@@ -1,17 +1,7 @@
-import sys
-import requests
-import time
-import base64
-import datetime
-import azureml.core
-import shutil
-import os, json
-from azureml.core import Workspace
-from azureml.core.run import Run
-from azureml.core.experiment import Experiment
-from azureml.core.model import Model
-import azureml.core
-from azureml.core.authentication import ServicePrincipalAuthentication
+Code Snippet
+The steps implemented are
+Log metrics of models that was trained on Flavia leaf pictures
+Register best model (trained with Flavia pictures)
 
 ws = Workspace(workspace_name = workspace,
                subscription_id = subscription_id,
@@ -21,8 +11,7 @@ ws.get_details()
 
 # COMMAND ----------
 
-# MAGIC %md ##### 1b. Load models from disk where it was stored in previous notebook 1_DeepLearningCifar!0NotebookExploration.py
-
+# MAGIC %md #####  Load models from disk where it was stored 
 # COMMAND ----------
 
 import keras
@@ -41,7 +30,7 @@ model2000.summary()
 
 # COMMAND ----------
 
-# MAGIC %md ##### 2c. Get testdate to regenerate metrics
+# MAGIC %md ##### Get testdate to regenerate metrics
 
 # COMMAND ----------
 
@@ -64,7 +53,7 @@ x_test /= 255
 
 # COMMAND ----------
 
-# MAGIC %md ##### 2d. Create new experiment in Azure ML service workspace and add both models
+# MAGIC %md #####Create new experiment in Azure ML service workspace and add both models
 
 # COMMAND ----------
 
