@@ -1,4 +1,4 @@
-
+Code Snippet
 workspace="<<your_name_of_azure_ml_service_workspace>>"
 resource_grp="<<your_resource_group_amlservice>>"
 subscription_id="<<your_subscriptionid_amlservice>>"
