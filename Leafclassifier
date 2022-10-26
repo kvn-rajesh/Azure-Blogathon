@@ -1,20 +1,5 @@
-'''
+'''Code Snippet
 Leaf Classifier via Deep Convolutional Neural Network
-
-'''
-
-import tensorflow as tf
-import numpy as np
-import matplotlib.pyplot as plt
-import random
-import os
-import argparse
-import tensorflow.contrib.slim as slim
-
-from model_helpers import *
-from data_helpers import *
-from network import *
-
 # Setting the training parameters
 
 # Number of possible actions
