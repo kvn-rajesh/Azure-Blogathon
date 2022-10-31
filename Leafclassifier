@@ -3,11 +3,11 @@ Leaf Classifier via Deep Convolutional Neural Network
 # Setting the training parameters
 
 # Number of possible actions
-actions = 99
+actions = 199
 # How many experience traces to use for each training step.
 batch_size = 64
 # Number of training steps
-num_steps = 5501
+num_steps = 6000
 
 # The path to save our model to.
 path = "./cnn"
