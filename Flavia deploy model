@@ -2,8 +2,8 @@ Code Snippet
 In this notebook the following steps will be excuted:
 Build model on Flavia pictures in storage account
 Build model on dataset of Flavia pictures 
-workspace="<<your_name_of_azure_ml_service_workspace>>"
-resource_grp="<<your_resource_group_amlservice>>"
+workspace="<<name_of_azure_ml_service_workspace>>"
+resource_grp="<<resource_group_amlservice>>"
 subscription_id="<<your_subscriptionid_amlservice>>"
 
 par_model_name = 'flavia.h5' 
