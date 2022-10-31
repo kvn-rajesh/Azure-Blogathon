@@ -1,6 +1,6 @@
-
-storageaccount="<<your_name_of_storare_account>>"
-account_key="<<your_account_key_of_storare_account>>"
+Code Snippet for Storage account to be mounted to Azure Databricks workspace.
+storageaccount="<<name_of_storare_account>>"
+account_key="<<account_key_of_storare_account>>"
 
 containername="Flaviadataset"
 mountname=containername
@@ -26,8 +26,7 @@ else:
 
 # COMMAND ----------
 
-import zipfile
-import os
+
 datafile = "flavia.zip"
 datafile_dbfs = os.path.join("/dbfs/mnt/" + mountname, datafile)
 
@@ -47,9 +46,7 @@ zip_ref.close()
 
 # COMMAND ----------
 
-import matplotlib.pyplot as plt
-import random
-import numpy as np
+
 from PIL import Image
 import os
 
