@@ -1,4 +1,4 @@
-Code Snippet
+Code Snippet for Flavia Log Model
 The steps implemented are
 Log metrics of models that was trained on Flavia leaf pictures
 Register best model (trained with Flavia pictures)
@@ -14,7 +14,7 @@ ws.get_details()
 # MAGIC %md #####  Load models from disk where it was stored 
 # COMMAND ----------
 
-import keras
+
 from keras.models import load_model
 
 #path= '/dbfs/Flavia/models/'
