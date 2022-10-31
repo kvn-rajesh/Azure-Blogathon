@@ -1,4 +1,4 @@
-Code Snippet
+Code Snippet for deploying Flavia model
 In this notebook the following steps will be excuted:
 Build model on Flavia pictures in storage account
 Build model on dataset of Flavia pictures 
@@ -45,14 +45,6 @@ print("Model picked: {} \nModel Description: {} \nModel Version: {}".format(mode
 #%%writefile score_deeplearning.py
 score_deeplearning = """
 
-import json
-
-from azureml.core.model import Model
-from keras.models import load_model
-from io import BytesIO
-import numpy as np
-from PIL import Image
-from base64 import b64decode
 
 def init():
     global trainedModel
