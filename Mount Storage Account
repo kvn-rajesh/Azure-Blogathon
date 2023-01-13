@@ -47,33 +47,3 @@ zip_ref.close()
 # COMMAND ----------
 
 
-from PIL import Image
-import os
-
-categoriesList=[Flavia leaf datset category"]
-
-def plotImagesMount(n_images=8):
-    fig, axes = plt.subplots(n_images, n_images, figsize=(9,9))
-    axes = axes.flatten()
-    
-    for i in range(n_images * n_images):
-        rand1 = random.randint(0, 9)
-        rand2 = random.randint(1, 200)
-        filename=str(categoriesList[rand1]) + "_" + str(rand2)
-        filenamepng=filename + ".png"
-        img = Image.open(os.path.join("/dbfs/mnt/" + mountname + "/", filenamepng))
-        ax = axes[i]
-    
-        ax.imshow( img, cmap="Greys_r")
-        ax.set_xticks(())
-        ax.set_yticks(())
-        
-        ax.set_title(filename, fontsize=18 - n_images)
-        
-    plot = plt.tight_layout()
-    return plot
-  
-display(plotImagesMount(n_images=10))
-
-# COMMAND ----------
-
